@@ -13,17 +13,28 @@
 
         <div class="form">
             <!-- actual form contents -->
-            <form class="registration" action="">
+            <!-- <form class="registration" action="">  -->
 
-                <input type="text" placeholder="email">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="Password">
-                <button>Create</button>
+                <input id="email" type="text" placeholder="email">
+                <input id="first-name" type="text" placeholder="First Name">
+                <input id="last-name" type="text" placeholder="Last Name">
+                <input id="user-name" type="text" placeholder="Username">
+                <input id="password" type="text" placeholder="Password">
+                <button class="registration-btn">Create</button>
                 <p>Already registered? <a href="#">Login</a></p>
 
-            </form>
+                <!-- Login form for those who have already created account-->
+
+                <form class="login-form" action="">
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Password">
+                    <button>Login</button>
+                    <p>Not registered? <a href="#">Register</a></p>
+                </form>
+
+                <!-- end of login form-->
+
+            <!--</form> -->
             <!-- end of form contents -->
         </div>
 
@@ -33,4 +44,5 @@
 
 
 </body>
+<script src="login.js"></script>
 </html>
