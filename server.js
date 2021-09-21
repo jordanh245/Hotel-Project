@@ -4,7 +4,7 @@ const {Users} = require('./models')
 const {Reservations} = require('./models')
 const {Hotels} = require('./models')
 const app = express()
-const PORT = 3020;
+const PORT = 3021;
 
 
 
