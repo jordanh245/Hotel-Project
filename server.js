@@ -20,7 +20,7 @@ app.use(express.json())
 
 // CREATE FOR THE USER
 app.post("/createUser", async (req, res) => {
-	const { firstName, lastName, email, username, password} = req.body;
+	const {firstName, lastName, email, username, password} = req.body;
 	const newUser = await Users.create({
 		firstName,
 		lastName,
@@ -34,30 +34,13 @@ res.send(newUser)
 });
 
 
-// CREATE FOR HOTEL
 
-app.post ("/reservation", async (req, res) =>{
-	const {startDate, endDate, userId, hotelId} = req.body
-	const newRes = await Reservations.create({
-		startDate,
-		endDate,
-		userId,
-		hotelId,
-		
 
-	})
-	res.send(newRes)
-})
+
 
 // READ HOTELS
 app.post("/viewHotels", async (req, res) => {
-	const allHotels = await Hotels.findAll({
-		attributes: [
-			'hotelName',
-			'hotelAddress',
-			'hotelState'
-		]
-	})
+	const allHotels = await Hotels.findAll()
 	res.send(allHotels)
 })
 
