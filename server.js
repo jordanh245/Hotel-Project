@@ -22,7 +22,7 @@ app.use(express.json())
 app.post("/createUser", async (req, res) => {
 	const {firstName, lastName, email, username, password} = req.body;
 	const newUser = await Users.create({
-		firstName,
+		firstName: req.body.firstName,
 		lastName,
 		email,
 		username,
