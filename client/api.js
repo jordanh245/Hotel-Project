@@ -1,13 +1,14 @@
+const apiKey = "AIzaSyCAMS8MEohfgK7xkMnZ3-QNQQ_wEwpO0bo"
 const apiButton = document.getElementById("api-btn");
 
 async function getApiData() {
 
     const input = document.querySelector(".api-input").value;
      // console.log(input)
-    const URL = `https://travelpartner.googleapis.com/v3/accounts/${input}/hotels:setLiveOnGoogle`
-    const fetchHotels = await fetch(`${URL}`);
-    const jsonHotels = await fetchHotels.json();
-    console.log(jsonHotels)
+    const URL = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${input}&key=${apiKey}`
+    const fetchFlights = await fetch(`${URL}`);
+    const jsonFlights = await fetchFlights.json();
+    console.log(jsonFlights)
 
 }
 
