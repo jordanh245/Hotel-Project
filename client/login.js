@@ -12,7 +12,9 @@ const addUserInfo = async () => {
 
     const userTable = { emailInput, firstNameInput, lastNameInput, userNameInput, passwordInput }
     console.log(userTable)
-    const data = await fetch("http://localhost:3020/createUser", {
+    const URL = "http://localhost:3021/createUser";
+
+    const createData = await fetch( URL, {
        
         method: "POST",
         mode: "",
