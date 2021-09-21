@@ -14,6 +14,3 @@ function buttonCreate() {
 registrationButton.addEventListener("click", () => buttonCreate())
 //// end of registration button
 
-// API section
-
-////
