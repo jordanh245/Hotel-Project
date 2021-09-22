@@ -17,8 +17,9 @@ const readData = async () => {
     let seedInfo = await seedData.json();
     console.log(seedInfo)
    
-    for (item in seedInfo) {
+    for (item of seedInfo) {
         // const id = item.id;
+        console.log(item)
         const name = item.hotelName;
         const address = item.hotelAddress;
         const image = item.hotelImg;
@@ -28,13 +29,18 @@ const readData = async () => {
         const hotelName = document.createElement("h1");
         const hotelImg = document.createElement("img");
         const hotelAddress = document.createElement("p");
+        const reservationButton = document.createElement("button");
+        reservationButton.innerHTML = "reserve";
         // idNumber.innerHTML = id;
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-        infoContainer.append(hotelName, hotelImg, hotelAddress)
+        infoContainer.append(hotelName, hotelImg, hotelAddress, reservationButton)
     }
 }
-
+const testButton =  () => {
+    console.log("button click")
+}
    
 findButton.addEventListener("click", () => readData())
+reservationButton.addEventListener("click", () => testButton())
