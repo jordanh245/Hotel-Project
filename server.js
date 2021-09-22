@@ -68,7 +68,7 @@ app.post("/viewHotels", async (req, res) => {
 })
 
 
-app.post ("/viewReservations/:userId", async (req, res)=> {
+
 
 app.post ("/viewReservations/:id", async (req, res)=> {
 
