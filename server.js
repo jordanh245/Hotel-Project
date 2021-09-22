@@ -6,6 +6,9 @@ const {Hotels} = require('./models')
 const app = express()
 const PORT = 3021;
 
+const cors = require('cors')
+
+app.use(cors())
 
 
 app.use(express.json()) 
@@ -22,11 +25,11 @@ app.use(express.json())
 app.post("/createUser", async (req, res) => {
 	const {firstName, lastName, email, username, password} = req.body;
 	const newUser = await Users.create({
-		firstName: req.body.firstName,
-		lastName,
-		email,
-		username,
-		password
+		firstName: firstName,
+		lastName: lastName,
+		email: email,
+		username: username,
+		password: password
 	})
 	
 
@@ -74,6 +77,17 @@ app.post("/deleteReservation/:id", async (req, res) => {
 	res.send("removed")
 })
 
+
+
+// DELETE HOTEL IF NEEDED
+// app.post("/deleteHotel/:id", async (req, res) => {
+// 	const removeHot = await Hotels.destroy({
+// 		where:{
+// 			id:req.params.id
+// 		}
+// 	})
+// 	res.send("removed")
+// })
 
 
 app.listen(PORT, console.log(`on ${PORT}`))

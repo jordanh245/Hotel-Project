@@ -1,23 +1,31 @@
+
 // creating functionality for the registration button
 const registrationButton = document.querySelector(".registration-btn");
 const loginButton = document.querySelector(".login-btn");
 
 const addUserInfo = async () => {
 
-    const emailInput = document.getElementById("email").value;
-    const firstNameInput = document.getElementById("first-name").value;
-    const lastNameInput = document.getElementById("last-name").value;
-    const userNameInput = document.getElementById("user-name").value;
-    const passwordInput = document.getElementById("password").value;
+    const email = document.querySelector(".email").value;
+    const firstName = document.querySelector(".first-name").value;
+    const lastName = document.querySelector(".last-name").value;
+    const username = document.querySelector(".Username").value;
+    const password = document.querySelector(".password").value;
 
-    const userTable = { emailInput, firstNameInput, lastNameInput, userNameInput, passwordInput }
-    console.log(userTable)
+    const userTable = {
+        email, 
+        firstName, 
+        lastName, 
+        username, 
+        password 
+    };
+    
+        console.log(userTable)
     const URL = "http://localhost:3021/createUser";
 
     const createData = await fetch( URL, {
        
         method: "POST",
-        mode: "",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -34,6 +42,12 @@ function loginButtonCreate() {
 
 registrationButton.addEventListener("click", () => addUserInfo())
 loginButton.addEventListener("click", () => loginButtonCreate())
+
+
+
+
+
+
 //// end of registration button
 
 // routes for login page
