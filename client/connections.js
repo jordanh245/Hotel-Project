@@ -14,7 +14,8 @@ const readData = async () => {
             "Content-Type": "application/json",
         },
     });
-console.log(seedData)
+    let seedInfo = await seedData.json()
+console.log(seedInfo)
 }
 
    

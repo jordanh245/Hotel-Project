@@ -36,7 +36,27 @@ app.post("/createUser", async (req, res) => {
 res.send(newUser)
 });
 
+//  POSSIBLE LOGIN
+// app.post("/login", async (req, res)=> {
+// 	const {username, password} = req.body:
+// 	const userCheck = await Users.findAll({
+// 		where: {
+// 			username: username,
+// 			password: password
+// 		}
+// 	})
+// })
 
+app.post("/createReservations", async (req, res) => {
+	const {startDate, endDate, userId, hotelId} = req.body;
+	const newRes = await Reservations.create({
+		startDate: startDate,
+		endDate: endDate,
+		userId: userId,
+		hotelId: hotelId
+	})
+	res.send(newRes)
+})
 
 
 
@@ -48,6 +68,18 @@ app.post("/viewHotels", async (req, res) => {
 })
 
 
+
+
+app.post ("/viewReservations/:id", async (req, res)=> {
+
+	const {userId} = req.params;
+	const reserv = await Reservations.findAll({
+		where:{
+			userId:userId
+		}
+	})
+	res.send (reserv)
+})
 
 
 
