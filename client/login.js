@@ -18,8 +18,8 @@ const addUserInfo = async () => {
         username, 
         password 
     };
+    console.log(userTable)
     
-        console.log(userTable)
     const URL = "http://localhost:3021/createUser";
 
     const createData = await fetch( URL, {
