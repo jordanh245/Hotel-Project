@@ -3,14 +3,24 @@ const express = require('express')
 const {Users} = require('./models')
 const {Reservations} = require('./models')
 const {Hotels} = require('./models')
+// const cookieParser = require("cookie-parser")
+// const session = require("express-session")
 const app = express()
 const PORT = 3021;
 
 const cors = require('cors')
+// app.use(cookieParser())
+// app.use(
+// 	session({
+// 		secret: "secret",
+// 		resave: false,
+// 		saveUninitialized: true,
+// 		cookie: {secure: false, maxAge: 2592000}
+// 	})
+// );
+
 
 app.use(cors())
-
-
 app.use(express.json()) 
 
 
@@ -39,12 +49,20 @@ res.send(newUser)
 //  POSSIBLE LOGIN
 // app.post("/login", async (req, res)=> {
 // 	const {username, password} = req.body:
-// 	const userCheck = await Users.findAll({
+// 	const userCheck = await Users.findOne({
 // 		where: {
 // 			username: username,
 // 			password: password
 // 		}
 // 	})
+// // 	const userFound = checkIfUserExist.dataValues
+// // 	if(checkIfUserExist.dataValues){
+// // 	req.session.user = userFound
+// // 		res.redirect("/viewReservations/:id")
+// // } else {
+// // 	res.status(401)
+// // 	.send("That is not a real user")
+// res.send(userCheck)
 // })
 
 app.post("/createReservations", async (req, res) => {
@@ -62,7 +80,7 @@ app.post("/createReservations", async (req, res) => {
 
 
 // READ HOTELS
-app.post("/viewHotels", async (req, res) => {
+app.get("/viewHotels", async (req, res) => {
 	const allHotels = await Hotels.findAll()
 	res.send(allHotels)
 })
@@ -70,8 +88,13 @@ app.post("/viewHotels", async (req, res) => {
 
 
 
-app.post ("/viewReservations/:id", async (req, res)=> {
+app.post ("/viewReservations/:userId", async (req, res)=> {
+// if(req.session.user){
+// 	res.render("/viewReservations/:id")
 
+// } else{
+// 	res.render("/login")
+// }
 	const {userId} = req.params;
 	const reserv = await Reservations.findAll({
 		where:{
