@@ -14,8 +14,14 @@ const readData = async () => {
             "Content-Type": "application/json",
         },
     });
-    let seedInfo = await seedData.json()
-console.log(seedInfo)
+    let seedInfo = await seedData.json();
+    console.log(seedInfo)
+
+    for (item in seedInfo) {
+        const hotelData = seedInfo
+        const hotelContainer = document.createElement("div");
+        
+    }
 }
 
    
