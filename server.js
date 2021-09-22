@@ -67,7 +67,11 @@ app.post("/viewHotels", async (req, res) => {
 	res.send(allHotels)
 })
 
+
 app.post ("/viewReservations/:userId", async (req, res)=> {
+
+app.post ("/viewReservations/:id", async (req, res)=> {
+
 	const {userId} = req.params;
 	const reserv = await Reservations.findAll({
 		where:{
