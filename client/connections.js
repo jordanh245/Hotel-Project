@@ -1,15 +1,15 @@
-const apiButton = document.getElementById("api-btn");
+const findButton = document.querySelector(".find-btn");
+const infoContainer = document.querySelector(".info-container");
 
 
-    const userInput = document.querySelector(".api-input").value;
-    const infoContainer = document.querySelector(".info-container");
+function findData() {
 
-    const addUserInfo = async () => {
-        
+    const userInput = document.querySelector(".find-input").value;
+    console.log(userInput)
 
-    }
+}
+
+
 
    
-
-
-apiButton.addEventListener("click", () => getApiData())
+findButton.addEventListener("click", () => findData())
