@@ -128,11 +128,15 @@ app.get ("/viewReservations", async (req, res)=> {
 
 
 // UPDATE RESERVATIONS
-app.post("/updateReservation", async (req, res) => {
-	const {startDate, endDate} = req.body
-	const newDate = await Reservations.update(req.body)
-	res.send(newDate)
-})
+// app.post("/updateReservation/id", async (req, res) => {
+// 	const {startDate, endDate} = req.body
+// 	const newDate = await Reservations.update(req.body{
+// 		where:{
+// 			id.req.params.id
+// 		})
+// 	}
+// 	res.send(newDate)
+// })
 
 
 

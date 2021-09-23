@@ -38,8 +38,8 @@ const showReservations = async () => {
 
 const updateButton = document.querySelector('.date-btn')
 const updateRes = async () => {
-    const startDate  = document.querySelector('.Check-in').value
-    // const outId  = document.querySelector('.Check-out').value
+   
+
     const url = `http://localhost:3021/updateReservation/${startDate}`
     
     
