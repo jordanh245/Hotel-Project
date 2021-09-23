@@ -1,0 +1,25 @@
+body {
+    background-color: #E7625F;
+}
+
+a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #E7625F;
+}
+
+.logo {
+    height: 65px;
+    width: 65px;
+}
+
+
+.navbar-brand {
+    padding-left: 4px;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-link {
+    color:#E7625F;
+    padding: 5px;
+}
