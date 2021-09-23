@@ -140,7 +140,14 @@ a {
      height: 150px;
      width: 270px;
      margin-bottom: 10px;
-     border: 1px solid gray;
+     border: 1px solid black;
      border-radius: 4px;
-     box-shadow: 5px 5px 5px rgb(80, 79, 79);
+     box-shadow: 5px 5px 5px black;
+     transition: 1.3s;
+ }
+
+ .image-one:hover, .image-two:hover, .image-three:hover,
+ .image-four:hover, .image-five:hover {
+    transform: scale(1.25);
+     z-index: 1;
  }
