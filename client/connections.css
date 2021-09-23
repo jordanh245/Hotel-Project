@@ -102,3 +102,20 @@ input {
 }
 
 
+@media (max-width: 995px) {
+    .info-container {
+    display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 536px) {
+    .info-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        text-align: center;
+    }
+} 
