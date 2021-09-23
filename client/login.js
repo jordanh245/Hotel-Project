@@ -33,8 +33,8 @@ const addUserInfo = async () => {
     });
 
 }
-
-// POSSIBLE LOGIN FUNCTION (DOES NOT WORK PAGE, AUTO REFRESHES)
+// routes for login page
+// POSSIBLE LOGIN FUNCTION (DOES NOT WORK ATM)
 // const loginButtonCreate = async () => {
 //     const userInput = document.querySelector(".user-input").value;
 //     const passInput = document.querySelector(".pass-input").value;
@@ -56,17 +56,16 @@ const addUserInfo = async () => {
 //     });
 //     console.log(userInput, passInput)
 // }
-
+//// end of routes
 registrationButton.addEventListener("click", () => addUserInfo())
-loginButton.addEventListener("click", () => loginButtonCreate())
-
-
-
-
-
-
+// loginButton.addEventListener("click", () => loginButtonCreate())
 //// end of registration button
 
-// routes for login page
 
-//// end of routes
+
+
+
+
+
+
+

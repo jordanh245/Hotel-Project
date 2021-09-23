@@ -4,7 +4,7 @@ const {Users} = require('./models')
 const {Reservations} = require('./models')
 const {Hotels} = require('./models')
 const cookieParser = require("cookie-parser")
-const session = require("express-session")
+const sessions = require("express-session")
 const cors = require('cors')
 const app = express()
 const PORT = 3021;
@@ -49,7 +49,7 @@ app.get("/hotels", (req, res) => {
 app.get("/reservations", (req, res) => {
 	res.render("views");
 });
-// ------------------
+// // ------------------
 
 
 // CREATE FOR THE USER
@@ -64,30 +64,32 @@ app.post("/createUser", async (req, res) => {
 	})
 	
 
-res.send(newUser)
+	// res.redirect("http://localhost:3021/viewHotels")
 });
 
 //  POSSIBLE LOGIN
-// app.post("/login", async (req, res)=> {
-// 	const {username, password} = req.body;
-// 	const userCheck = await Users.findOne({
-// 		where: {
-// 			username: username,
-// 			password: password
-// 		}
-// 	});
-// 	const userFound = userCheck.dataValues
-// 	if(userCheck.dataValues){
-// 	req.session.User = userFound;
-// 		res.redirect("http://localhost:3021/viewHotels");
-// } else {
-// 	res
-// 	.status(401)
-// 	.send("That is not a real user")
-// }
-// });
+app.post("/login", async (req, res)=> {
+	const {username, password} = req.body;
+	const userCheck = await Users.findOne({
+		where: {
+			username: username,
+			password: password
+		}
+	});
+	const userFound = userCheck.dataValues
+	if(userCheck.dataValues){
+	req.session.User = userFound;
+		res.redirect("http://localhost:3021/viewHotels");
+} else {
+	res
+	.status(401)
+	.send("That is not a real user")
+}
+});
 
-app.post("/createReservations/:id", async (req, res) => {
+
+// CREATE RESERVATION
+app.post("/createReservations", async (req, res) => {
 	const {startDate, endDate, userId, hotelId} = req.body;
 	const newRes = await Reservations.create({
 		startDate: startDate,
@@ -110,17 +112,17 @@ app.get("/viewHotels", async (req, res) => {
 
 
 // VIEW RESERVATIONS
-app.post ("/viewReservations/:userId", async (req, res)=> {
-// if(req.session.user){
-// 	res.render("/viewReservations/:userId")
+app.post ("/viewReservations/:id", async (req, res)=> {
+if(req.session.user){
+	res.render("/viewReservations/:id")
 
-// } else{
-// 	res.render("/login")
-// }
-	const {userId} = req.params;
+} else{
+	res.render("/login")
+}
+	
 	const reserv = await Reservations.findAll({
 		where:{
-			userId:userId
+			id:req.params.id
 		}
 	})
 	res.send (reserv)
