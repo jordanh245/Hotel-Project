@@ -91,9 +91,11 @@ const readData = async () => {
 
         const idNumber = document.createElement("h2");
         const hotelName = document.createElement("h1");
+        hotelName.className = "hotel-name"
         const hotelImg = document.createElement("img");
         hotelImg.className = "image"
         const hotelAddress = document.createElement("p");
+        hotelAddress.className = "address-name"
         
         const resStart = document.createElement("input");
         resStart.className = `start${hotelId}`

@@ -86,3 +86,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+
+.message {
+    margin-top: 15px;
+}

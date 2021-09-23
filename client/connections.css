@@ -37,6 +37,13 @@ a {
     text-align: center;
 }
 
+
+.header {
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+}
+
 .image {
     width: 400px;
     border: 1px solid gray;
@@ -49,7 +56,7 @@ input {
     background: #f2f2f2;
     width: 180px;
     border: 1px solid gray;
-    margin: 0 0 15px;
+    margin: 0 2px 10px;
     padding: 10px;
     box-sizing: border-box;
     font-size: 14px;
@@ -60,7 +67,18 @@ input {
     background: #E9EAE0;
     padding: 20px;
     text-align: center;
+    border: 1px solid black;
     border-radius: 4px;
+    
+}
+
+.hotel-name {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.address-name {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 5px;
 }
 
 .reservation {
@@ -68,7 +86,7 @@ input {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     outline: 0;
-    width: 360px;
+    width: 364px;
     border: 0;
     padding: 15px;
     background: #E7625F;
