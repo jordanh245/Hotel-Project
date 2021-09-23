@@ -4,19 +4,19 @@ const infoContainer = document.querySelector(".info-container")
 
 
 
+//TAKES USER INPUT AND ADD IT TO RESERVATIONS TABLE
+const reserveHotel = async (hotelId) => {
+    
+    const startDate = document.querySelector(`.start${hotelId}`).value;
 
-const reserveHotel = async (id) => {
-    // console.log("reserve Hotel ", id)
-    const startDate = document.querySelector(`.start${id}`).value;
-// console.log(checkIn)
-    const endDate = document.querySelector(`.end${id}`).value;
-    // console.log(checkIn)
-    // console.log(checkOut)
+    const endDate = document.querySelector(`.end${hotelId}`).value;
+   
     
     const resTable = {
         startDate,
-        endDate, 
-        hotelId
+        endDate,
+        hotelId 
+        
     
     };
     console.log(resTable)
@@ -31,6 +31,7 @@ const reserveHotel = async (id) => {
         body: JSON.stringify(resTable),
       });
 } 
+// PULLS FROM OUR HOTEL DATABASE AND APPENDS IT TO THE SCREEN
 const readData = async () => {
 
     infoContainer.innerHTML = "";
@@ -48,12 +49,11 @@ const readData = async () => {
     // console.log(seedInfo)
    
     for (item of seedInfo) {
-        const id = item.id;
+        
         const name = item.hotelName;
         const address = item.hotelAddress;
         const image = item.hotelImg;
         const hotelId = item.id
-        // console.log(hotelId)
         const hotelContainer = document.createElement("div");
         hotelContainer.className ="hotel-card"
 
@@ -72,8 +72,8 @@ const readData = async () => {
 
         resStart.placeholder = "Check-in"
         resEnd.placeholder = "Check-out"
-        reservationButton.innerHTML = "reserve";
-        idNumber.innerHTML = id;
+        
+        reservationButton.innerHTML = "RESERVE";
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
@@ -95,4 +95,4 @@ const readData = async () => {
 
 readData()
 
-// findButton.addEventListener("click", () => readData())
+

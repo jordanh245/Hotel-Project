@@ -112,19 +112,15 @@ app.get("/viewHotels", async (req, res) => {
 
 
 // VIEW RESERVATIONS
-app.post ("/viewReservations/:id", async (req, res)=> {
-if(req.session.user){
-	res.render("/viewReservations/:id")
+app.get ("/viewReservations", async (req, res)=> {
+// if(req.session.user){
+// 	res.render("/viewReservations/:id")
 
-} else{
-	res.render("/login")
-}
+// } else{
+// 	res.render("/login")
+// }
 	
-	const reserv = await Reservations.findAll({
-		where:{
-			id:req.params.id
-		}
-	})
+	const reserv = await Reservations.findAll();
 	res.send (reserv)
 })
 
@@ -132,13 +128,9 @@ if(req.session.user){
 
 
 // UPDATE RESERVATIONS
-app.post("/updateReservation/:id", async (req, res) => {
+app.post("/updateReservation", async (req, res) => {
 	const {startDate, endDate} = req.body
-	const newDate = await Reservations.update(req.body,{
-		where:{
-			id:req.params.id
-		}
-	})
+	const newDate = await Reservations.update(req.body)
 	res.send(newDate)
 })
 
