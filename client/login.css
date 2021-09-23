@@ -116,3 +116,39 @@ a {
     margin-top: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.background {
+    background-color: #E9EAE0;
+    background-size: 100%;
+}
+
+.words {
+    padding: 5px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1px 1px;
+    padding: 5px;
+    
+}
+
+.image-one, .image-two, .image-three,
+ .image-four, .image-five {
+     height: 150px;
+     width: 270px;
+     margin-bottom: 10px;
+     border: 1px solid black;
+     border-radius: 4px;
+     box-shadow: 5px 5px 5px black;
+     transition: 1.3s;
+ }
+
+ .image-one:hover, .image-two:hover, .image-three:hover,
+ .image-four:hover, .image-five:hover {
+    transform: scale(1.25);
+     z-index: 1;
+ }
