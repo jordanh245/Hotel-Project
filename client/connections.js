@@ -43,4 +43,3 @@ const testButton =  () => {
 }
    
 findButton.addEventListener("click", () => readData())
-reservationButton.addEventListener("click", () => testButton())
