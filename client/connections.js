@@ -54,7 +54,9 @@ const readData = async () => {
         const image = item.hotelImg;
         const hotelId = item.id
         // console.log(hotelId)
-        // const hotelContainer = document.createElement("div");
+        const hotelContainer = document.createElement("div");
+        hotelContainer.className ="hotel-card"
+
         const idNumber = document.createElement("h2");
         const hotelName = document.createElement("h1");
         const hotelImg = document.createElement("img");
@@ -75,7 +77,8 @@ const readData = async () => {
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-        infoContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton);
+        hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton);
+        infoContainer.append(hotelContainer)
 
 
         
