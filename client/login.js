@@ -20,7 +20,7 @@ const addUserInfo = async () => {
     };
     console.log(userTable)
     
-    const URL = "http://localhost:3021/createUser";
+    const URL = "http://localhost:3022/createUser";
 
     const createData = await fetch( URL, {
        
@@ -38,7 +38,7 @@ const addUserInfo = async () => {
 // const loginButtonCreate = async () => {
 //     const userInput = document.querySelector(".user-input").value;
 //     const passInput = document.querySelector(".pass-input").value;
-//     const URL = "http://localhost:3021/login";
+//     const URL = "http://localhost:3022/login";
 
 //     const userData = {
 //         userInput,

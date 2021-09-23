@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser")
 const sessions = require("express-session")
 const cors = require('cors')
 const app = express()
-const PORT = 3021;
+const PORT = 3022;
 
 
 app.use(cors())
@@ -49,7 +49,7 @@ app.get("/hotels", (req, res) => {
 app.get("/reservations", (req, res) => {
 	res.render("views");
 });
-// // ------------------
+// ------------------
 
 
 // CREATE FOR THE USER
@@ -128,15 +128,17 @@ app.get ("/viewReservations", async (req, res)=> {
 
 
 // UPDATE RESERVATIONS
-// app.post("/updateReservation/id", async (req, res) => {
-// 	const {startDate, endDate} = req.body
-// 	const newDate = await Reservations.update(req.body{
-// 		where:{
-// 			id.req.params.id
-// 		})
-// 	}
-// 	res.send(newDate)
-// })
+app.post("/updateReservation/:id", async (req, res) => {
+	const {startDate, endDate} = req.body
+	const newDate = await Reservations.update(req.body,{
+		where:{
+			id:req.params.id
+		
+		}
+	});
+	
+	res.send(newDate)
+})
 
 
 

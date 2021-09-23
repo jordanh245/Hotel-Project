@@ -20,7 +20,7 @@ const reserveHotel = async (hotelId) => {
     
     };
     console.log(resTable)
-    const url = "http://localhost:3021/createReservations";
+    const url = "http://localhost:3022/createReservations";
     const createReservation = await fetch(url, {
         method: "POST",
         mode: "cors",
@@ -42,7 +42,7 @@ const readData = async () => {
     infoContainer.innerHTML = "";
     // const userInput = document.querySelector(".find-input").value;
     // console.log(userInput)
-    const url = "http://localhost:3021/viewHotels";
+    const url = "http://localhost:3022/viewHotels";
     const seedData = await fetch(url, {
         method: "GET",
         mode: "cors",
