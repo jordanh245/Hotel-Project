@@ -124,7 +124,8 @@ a {
 
 .words {
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .grid {
