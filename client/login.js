@@ -34,11 +34,28 @@ const addUserInfo = async () => {
 
 }
 
-function loginButtonCreate() {
-    const userInput = document.querySelector(".user-input").value;
-    const passInput = document.querySelector(".pass-input").value;
-    console.log(userInput, passInput)
-}
+// POSSIBLE LOGIN FUNCTION (DOES NOT WORK PAGE, AUTO REFRESHES)
+// const loginButtonCreate = async () => {
+//     const userInput = document.querySelector(".user-input").value;
+//     const passInput = document.querySelector(".pass-input").value;
+//     const URL = "http://localhost:3021/login";
+
+//     const userData = {
+//         userInput,
+//         passInput
+//     }
+
+//     const createData = await fetch( URL, {
+       
+//         method: "POST",
+//         mode: "cors",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body:JSON.stringify(userData)
+//     });
+//     console.log(userInput, passInput)
+// }
 
 registrationButton.addEventListener("click", () => addUserInfo())
 loginButton.addEventListener("click", () => loginButtonCreate())

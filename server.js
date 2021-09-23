@@ -3,32 +3,53 @@ const express = require('express')
 const {Users} = require('./models')
 const {Reservations} = require('./models')
 const {Hotels} = require('./models')
-// const cookieParser = require("cookie-parser")
-// const session = require("express-session")
+const cookieParser = require("cookie-parser")
+const session = require("express-session")
+const cors = require('cors')
 const app = express()
 const PORT = 3021;
-
-const cors = require('cors')
-// app.use(cookieParser())
-// app.use(
-// 	session({
-// 		secret: "secret",
-// 		resave: false,
-// 		saveUninitialized: true,
-// 		cookie: {secure: false, maxAge: 2592000}
-// 	})
-// );
 
 
 app.use(cors())
 app.use(express.json()) 
+app.use(express.urlencoded({ extended: true }));
+
+
+const es6Renderer = require('express-es6-template-engine');
+app.use(express.static(__dirname + '/client/'));
+app.engine("html", es6Renderer);
+app.set("views", "client");
+app.set("view engine", "html");
+
+
+app.use(cookieParser('abcdef'))
+const oneDay = 1000 * 60 * 60 * 24
+app.use(
+	sessions({
+		secret: "secret",
+		resave: false,
+		saveUninitialized: true,
+		cookie: {secure: false, maxAge: oneDay}
+	})
+);
 
 
 
 
 
+// CHANGES THE URL 
+app.get("/", (req, res) => {
+	res.render("login");
+});
 
+app.get("/hotels", (req, res) => {
+	res.render("connections");
+});
 
+app.get("/reservations", (req, res) => {
+	res.render("views");
+});
+// ------------------
 
 
 // CREATE FOR THE USER
@@ -48,24 +69,25 @@ res.send(newUser)
 
 //  POSSIBLE LOGIN
 // app.post("/login", async (req, res)=> {
-// 	const {username, password} = req.body:
+// 	const {username, password} = req.body;
 // 	const userCheck = await Users.findOne({
 // 		where: {
 // 			username: username,
 // 			password: password
 // 		}
-// 	})
-// // 	const userFound = checkIfUserExist.dataValues
-// // 	if(checkIfUserExist.dataValues){
-// // 	req.session.user = userFound
-// // 		res.redirect("/viewReservations/:id")
-// // } else {
-// // 	res.status(401)
-// // 	.send("That is not a real user")
-// res.send(userCheck)
-// })
+// 	});
+// 	const userFound = userCheck.dataValues
+// 	if(userCheck.dataValues){
+// 	req.session.User = userFound;
+// 		res.redirect("http://localhost:3021/viewHotels");
+// } else {
+// 	res
+// 	.status(401)
+// 	.send("That is not a real user")
+// }
+// });
 
-app.post("/createReservations", async (req, res) => {
+app.post("/createReservations/:id", async (req, res) => {
 	const {startDate, endDate, userId, hotelId} = req.body;
 	const newRes = await Reservations.create({
 		startDate: startDate,
@@ -87,10 +109,10 @@ app.get("/viewHotels", async (req, res) => {
 
 
 
-
+// VIEW RESERVATIONS
 app.post ("/viewReservations/:userId", async (req, res)=> {
 // if(req.session.user){
-// 	res.render("/viewReservations/:id")
+// 	res.render("/viewReservations/:userId")
 
 // } else{
 // 	res.render("/login")
@@ -107,7 +129,7 @@ app.post ("/viewReservations/:userId", async (req, res)=> {
 
 
 
-// UPDATE
+// UPDATE RESERVATIONS
 app.post("/updateReservation/:id", async (req, res) => {
 	const {startDate, endDate} = req.body
 	const newDate = await Reservations.update(req.body,{
@@ -122,7 +144,7 @@ app.post("/updateReservation/:id", async (req, res) => {
 
 
 
-// 	DELETE
+// 	DELETE RESERVATIONS
 app.post("/deleteReservation/:id", async (req, res) => {
 	const removeRes = await Reservations.destroy({
 		where:{

@@ -15,31 +15,33 @@ const readData = async () => {
         },
     });
     let seedInfo = await seedData.json();
-    console.log(seedInfo)
+    // console.log(seedInfo)
    
     for (item of seedInfo) {
-        // const id = item.id;
-        console.log(item)
+        const id = item.id;
+        // console.log(item)
         const name = item.hotelName;
         const address = item.hotelAddress;
         const image = item.hotelImg;
         // const hotelData = seedInfo
-        const hotelContainer = document.createElement("div");
-        // const idNumber = document.createElement("p");
+        // const hotelContainer = document.createElement("div");
+        const idNumber = document.createElement("h2");
         const hotelName = document.createElement("h1");
         const hotelImg = document.createElement("img");
         const hotelAddress = document.createElement("p");
         const reservationButton = document.createElement("button");
+        
         reservationButton.innerHTML = "reserve";
         // idNumber.innerHTML = id;
+        
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-        infoContainer.append(hotelName, hotelImg, hotelAddress, reservationButton)
+        infoContainer.append(hotelName, hotelImg, hotelAddress, reservationButton, idNumber)
     }
 }
 const testButton =  () => {
-    console.log("button click")
+    console.log("click")
 }
    
 findButton.addEventListener("click", () => readData())
