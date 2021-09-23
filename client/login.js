@@ -33,23 +33,39 @@ const addUserInfo = async () => {
     });
 
 }
+// routes for login page
+// POSSIBLE LOGIN FUNCTION (DOES NOT WORK ATM)
+// const loginButtonCreate = async () => {
+//     const userInput = document.querySelector(".user-input").value;
+//     const passInput = document.querySelector(".pass-input").value;
+//     const URL = "http://localhost:3021/login";
 
-function loginButtonCreate() {
-    const userInput = document.querySelector(".user-input").value;
-    const passInput = document.querySelector(".pass-input").value;
-    console.log(userInput, passInput)
-}
+//     const userData = {
+//         userInput,
+//         passInput
+//     }
 
+//     const createData = await fetch( URL, {
+       
+//         method: "POST",
+//         mode: "cors",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body:JSON.stringify(userData)
+//     });
+//     console.log(userInput, passInput)
+// }
+//// end of routes
 registrationButton.addEventListener("click", () => addUserInfo())
-loginButton.addEventListener("click", () => loginButtonCreate())
-
-
-
-
-
-
+// loginButton.addEventListener("click", () => loginButtonCreate())
 //// end of registration button
 
-// routes for login page
 
-//// end of routes
+
+
+
+
+
+
+
