@@ -46,7 +46,7 @@ a {
 }
 
 .form input {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     outline: 1;
     background: #f2f2f2;
     width: 100%;
@@ -90,4 +90,5 @@ a {
 
 .message {
     margin-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
