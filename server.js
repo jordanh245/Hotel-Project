@@ -140,7 +140,17 @@ app.post("/updateReservation/:id", async (req, res) => {
 	res.send(newDate)
 })
 
-
+app.get("/viewReservationDetails/:id", async (req, res) => {
+	const { hotelId } = req.params
+	const details = await Hotels.findAll({
+		where:{
+			id:hotelId
+		
+		}
+	});
+	
+	res.send(details)
+})
 
 
 

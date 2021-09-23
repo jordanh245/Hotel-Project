@@ -11,10 +11,27 @@ const showReservations = async () => {
         },
     });
 	let resInfo = await resData.json();
-
-
+   
+    
 	for( item of resInfo){
-		const start = item.startDate;
+	// 	const hotelId = item.hotelId
+    //     console.log(hotelId)
+    //     const hotelUrl = `http://localhost:3022/viewReservationDetails/${hotelId}`
+    // const hotelData = await fetch(hotelUrl, {
+    //     method: "GET",
+    //     mode: "cors",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    // });
+    // let hotelInfo = await hotelData.json();
+    // console.log(hotelInfo, "test")
+        
+        
+        
+        
+        
+        const start = item.startDate;
 		const end = item.endDate
         const reserveId = item.id
         
