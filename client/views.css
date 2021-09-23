@@ -28,9 +28,56 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 30px;
     color: white;
 }
 
 .date-container {
     text-align: center;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: #E9EAE0;
+    max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+input {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    outline: 1;
+    background: #f2f2f2;
+    width: 225px;
+    border: 1px solid gray;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+button {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    width: 225px;
+    border: 0;
+    padding: 15px;
+    background: #E7625F;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover, button:active {
+    background: #F7BEC0;
+    color: white;
 }
