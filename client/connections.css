@@ -55,7 +55,7 @@ input {
 
 .hotel-card {
     background: #E9EAE0;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -72,4 +72,10 @@ input {
     cursor: pointer;
     border-radius: 4px;
 }
+
+.reservation:hover {
+    background: #F7BEC0;
+    color: white;
+}
+
 
