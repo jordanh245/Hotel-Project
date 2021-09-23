@@ -31,6 +31,11 @@ const reserveHotel = async (hotelId) => {
         body: JSON.stringify(resTable),
       });
 } 
+
+
+
+
+
 // PULLS FROM OUR HOTEL DATABASE AND APPENDS IT TO THE SCREEN
 const readData = async () => {
 
@@ -57,7 +62,7 @@ const readData = async () => {
         const hotelContainer = document.createElement("div");
         hotelContainer.className ="hotel-card"
 
-        const idNumber = document.createElement("h2");
+        
         const hotelName = document.createElement("h1");
         const hotelImg = document.createElement("img");
         const hotelAddress = document.createElement("p");
