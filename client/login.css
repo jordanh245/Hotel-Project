@@ -5,6 +5,16 @@ body {
     background-position: center;
 }
 
+.logo {
+    height: 65px;
+    width: 65px;
+}
+
+
+.navbar-brand {
+    padding-left: 4px;
+    font-size: 35px;
+}
 
 
 .container {
@@ -46,14 +56,15 @@ body {
     width: 100%;
     border: 0;
     padding: 15px;
-    background: #F7BEC0;
+    background: #E7625F;
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
 }
 
 .form button:hover, .form button:active {
-    background: #E7625F;
+    background: #F7BEC0;
+    color: white;
 }
 
 .form .register-form {
