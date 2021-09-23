@@ -63,6 +63,7 @@ a {
 }
 
 .image {
+    height: 222px;
     width: 364px;
     border: 1px solid gray;
     border-radius: 4px;
