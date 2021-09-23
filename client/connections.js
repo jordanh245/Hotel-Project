@@ -4,23 +4,23 @@ const infoContainer = document.querySelector(".info-container")
 
 
 
+//TAKES USER INPUT AND ADD IT TO RESERVATIONS TABLE
+const reserveHotel = async (hotelId) => {
+    
+    const startDate = document.querySelector(`.start${hotelId}`).value;
 
-const reserveHotel = async (id) => {
-    // console.log("reserve Hotel ", id)
-    const startDate = document.querySelector(`.start${id}`).value;
-// console.log(checkIn)
-    const endDate = document.querySelector(`.end${id}`).value;
-    // console.log(checkIn)
-    // console.log(checkOut)
+    const endDate = document.querySelector(`.end${hotelId}`).value;
+   
     
     const resTable = {
         startDate,
-        endDate, 
-        hotelId
+        endDate,
+        hotelId 
+        
     
     };
     console.log(resTable)
-    const url = "http://localhost:3021/createReservations";
+    const url = "http://localhost:3022/createReservations";
     const createReservation = await fetch(url, {
         method: "POST",
         mode: "cors",
@@ -31,65 +31,38 @@ const reserveHotel = async (id) => {
         body: JSON.stringify(resTable),
       });
 } 
+
+
+
+
+
+// PULLS FROM OUR HOTEL DATABASE AND APPENDS IT TO THE SCREEN
 const readData = async () => {
 
     infoContainer.innerHTML = "";
     // const userInput = document.querySelector(".find-input").value;
     // console.log(userInput)
-    const url = "http://localhost:3021/viewHotels";
-    // // const seedData = await fetch(url, {
-    //     method: "GET",
-    //     mode: "cors",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // });
-    // let seedInfo = await seedData.json();
-    // console.log(seedInfo)
-    const seedInfo = [
-        {
-         createdAt: "2021-09-22T00:27:13.594Z",
-         hotelAddress: "4375 Admiralty Way, Marina Del Rey ",
-         hotelImg: "https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/partnerimages/31/82/318244150.jpeg",
-         hotelName: "The Ritz-Carlton, Marina del Rey",
-         hotelState: "CA",
-         id: 8,
-         updatedAt: "2021-09-22T00:27:13.594Z",
-         
+    const url = "http://localhost:3022/viewHotels";
+    const seedData = await fetch(url, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json",
         },
-        {
-            createdAt: "2021-09-22T00:27:13.594Z",
-            hotelAddress: "4375 Admiralty Way, Marina Del Rey ",
-            hotelImg: "https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/partnerimages/31/82/318244150.jpeg",
-            hotelName: "The Ritz-Carlton, Marina del Rey",
-            hotelState: "CA",
-            id: 8,
-            updatedAt: "2021-09-22T00:27:13.594Z",
-            
-           },
-           {
-            createdAt: "2021-09-22T00:27:13.594Z",
-            hotelAddress: "4375 Admiralty Way, Marina Del Rey ",
-            hotelImg: "https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/partnerimages/31/82/318244150.jpeg",
-            hotelName: "The Ritz-Carlton, Marina del Rey",
-            hotelState: "CA",
-            id: 8,
-            updatedAt: "2021-09-22T00:27:13.594Z",
-            
-           },
-    ]
+    });
+    let seedInfo = await seedData.json();
+    // console.log(seedInfo)
+   
     for (item of seedInfo) {
-        const id = item.id;
+        
         const name = item.hotelName;
         const address = item.hotelAddress;
         const image = item.hotelImg;
         const hotelId = item.id
-
-        // console.log(hotelId)
         const hotelContainer = document.createElement("div");
         hotelContainer.className ="hotel-card"
 
-        const idNumber = document.createElement("h2");
+        
         const hotelName = document.createElement("h1");
         hotelName.className = "hotel-name";
         const hotelImg = document.createElement("img");
@@ -108,12 +81,12 @@ const readData = async () => {
 
         resStart.placeholder = "Check-in"
         resEnd.placeholder = "Check-out"
-        reservationButton.innerHTML = "Reserve";
-        idNumber.innerHTML = id;
+        
+        reservationButton.innerHTML = "RESERVE";
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-        hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton);
+        hotelContainer.append(hotelName, hotelImg, hotelAddress,  resStart, resEnd,reservationButton);
         infoContainer.append(hotelContainer)
 
 
@@ -131,4 +104,4 @@ const readData = async () => {
 
 readData()
 
-// findButton.addEventListener("click", () => readData())
+

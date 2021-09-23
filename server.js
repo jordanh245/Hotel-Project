@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser")
 const sessions = require("express-session")
 const cors = require('cors')
 const app = express()
-const PORT = 3021;
+const PORT = 3022;
 
 
 app.use(cors())
@@ -49,7 +49,7 @@ app.get("/hotels", (req, res) => {
 app.get("/reservations", (req, res) => {
 	res.render("views");
 });
-// // ------------------
+// ------------------
 
 
 // CREATE FOR THE USER
@@ -112,19 +112,15 @@ app.get("/viewHotels", async (req, res) => {
 
 
 // VIEW RESERVATIONS
-app.post ("/viewReservations/:id", async (req, res)=> {
-if(req.session.user){
-	res.render("/viewReservations/:id")
+app.get ("/viewReservations", async (req, res)=> {
+// if(req.session.user){
+// 	res.render("/viewReservations/:id")
 
-} else{
-	res.render("/login")
-}
+// } else{
+// 	res.render("/login")
+// }
 	
-	const reserv = await Reservations.findAll({
-		where:{
-			id:req.params.id
-		}
-	})
+	const reserv = await Reservations.findAll();
 	res.send (reserv)
 })
 
@@ -137,12 +133,24 @@ app.post("/updateReservation/:id", async (req, res) => {
 	const newDate = await Reservations.update(req.body,{
 		where:{
 			id:req.params.id
+		
 		}
-	})
+	});
+	
 	res.send(newDate)
 })
 
-
+app.get("/viewReservationDetails/:id", async (req, res) => {
+	const { hotelId } = req.params
+	const details = await Hotels.findAll({
+		where:{
+			id:hotelId
+		
+		}
+	});
+	
+	res.send(details)
+})
 
 
 
