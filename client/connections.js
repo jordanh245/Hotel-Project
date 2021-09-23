@@ -64,8 +64,11 @@ const readData = async () => {
 
         
         const hotelName = document.createElement("h1");
+        hotelName.className = "hotel-name";
         const hotelImg = document.createElement("img");
+        hotelImg.className = "image";
         const hotelAddress = document.createElement("p");
+        hotelAddress.className = "address-name";
         
         const resStart = document.createElement("input");
         resStart.className = `start${hotelId}`
@@ -74,6 +77,7 @@ const readData = async () => {
         resEnd.className = `end${hotelId}`
        
         const reservationButton = document.createElement("button");
+        reservationButton.className = "reservation";
 
         resStart.placeholder = "Check-in"
         resEnd.placeholder = "Check-out"
