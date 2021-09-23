@@ -7,7 +7,10 @@ a {
 }
 
 .info-container {
-    display: 
+    margin-top: px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     
 }
 
@@ -33,6 +36,14 @@ a {
 }
 
 img {
-    width: 500px;
+    width: 400px;
 }
+
+.hotel-card {
+    background: #E9EAE0;
+    padding: 15px;
+    text-align: center;
+}
+
+
 

@@ -83,17 +83,12 @@ const readData = async () => {
         const name = item.hotelName;
         const address = item.hotelAddress;
         const image = item.hotelImg;
-<<<<<<< HEAD
-        
-        const hotelContainer = document.createElement("div");
-        hotelContainer.className = "hotel-card"
-=======
         const hotelId = item.id
+        
         // console.log(hotelId)
         const hotelContainer = document.createElement("div");
         hotelContainer.className ="hotel-card"
 
->>>>>>> 2fa1e284317084d7257f29e205a2ab61ca0ff021
         const idNumber = document.createElement("h2");
         const hotelName = document.createElement("h1");
         const hotelImg = document.createElement("img");
@@ -114,14 +109,9 @@ const readData = async () => {
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-<<<<<<< HEAD
-        hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton)
-        infoContainer.append(hotelContainer)
-=======
         hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton);
         infoContainer.append(hotelContainer)
 
->>>>>>> 2fa1e284317084d7257f29e205a2ab61ca0ff021
 
         
         reservationButton.addEventListener("click", () => {
