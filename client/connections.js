@@ -82,7 +82,7 @@ const readData = async () => {
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-        hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton);
+        hotelContainer.append(hotelName, hotelImg, hotelAddress,  resStart, resEnd,reservationButton);
         infoContainer.append(hotelContainer)
 
 
