@@ -33,7 +33,7 @@ a {
 }
 
 .header {
-    animation: transitionIn 8s;
+    animation: transitionIn 7s;
 }
 
 @keyframes transitionIn {
