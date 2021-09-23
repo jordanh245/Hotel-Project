@@ -1,5 +1,5 @@
 body {
-    background-color: #C85250;
+    background-color: #E7625F;
 }
 
 a {
@@ -7,13 +7,7 @@ a {
 }
 
 .info-container {
-    padding: 15px;
-    margin-top: px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 20px 20px
-    
+    background-color: #E9EAE0;
 }
 
 .logo {
@@ -37,103 +31,7 @@ a {
     text-align: center;
 }
 
-
-.header {
-    text-align: center;
-    margin-top: 25px;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
+img {
+    width: 500px;
 }
 
-.header {
-    animation: transitionIn 7s;
-}
-
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotateX(0);
-    }
-}
-
-.image {
-    width: 364px;
-    border: 1px solid gray;
-    border-radius: 4px;
-}
-
-input {
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-    outline: 1;
-    background: #f2f2f2;
-    width: 180px;
-    border: 1px solid gray;
-    margin: 0 2px 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.hotel-card {
-    background: #E9EAE0;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 4px;
-    
-}
-
-.hotel-name {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.address-name {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-top: 5px;
-}
-
-.reservation {
-    color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    outline: 0;
-    width: 364px;
-    border: 0;
-    padding: 15px;
-    background: #E7625F;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 5px 5px 5px gray;
-}
-
-.reservation:hover {
-    background: #F7BEC0;
-    color: white;
-}
-
-
-@media (max-width: 995px) {
-    .info-container {
-    display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 20px;
-    }
-
-}
-
-
-@media (max-width: 536px) {
-    .info-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); 
-        text-align: center;
-    }
-} 
