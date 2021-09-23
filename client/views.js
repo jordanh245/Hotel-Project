@@ -17,17 +17,21 @@ const showReservations = async () => {
 		const start = item.startDate;
 		const end = item.endDate
         const reserveId = item.id
-		
+        
 
 		const startDate = document.createElement("p");
 		const endDate = document.createElement("p");
 		const id = document.createElement("p")
+       
+        
 
 
 
 		startDate.innerHTML= start;
 		endDate.innerHTML= end;
         id.innerHTML= reserveId
+        
+       
 		
 
 
