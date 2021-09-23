@@ -23,3 +23,14 @@ a {
     color:#E7625F;
     padding: 5px;
 }
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 30px;
+    color: #E9EAE0;
+}
+
+.date-container {
+    text-align: center;
+}
