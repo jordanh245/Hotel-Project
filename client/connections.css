@@ -39,11 +39,26 @@ img {
     width: 400px;
 }
 
+input {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    outline: 1;
+    background: #f2f2f2;
+    width: 180px;
+    border: 1px solid gray;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
 .hotel-card {
     background: #E9EAE0;
     padding: 15px;
     text-align: center;
 }
 
-
+.reservation {
+    width: 351px;
+}
 

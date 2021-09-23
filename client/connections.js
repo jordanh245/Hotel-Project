@@ -84,7 +84,7 @@ const readData = async () => {
         const address = item.hotelAddress;
         const image = item.hotelImg;
         const hotelId = item.id
-        
+
         // console.log(hotelId)
         const hotelContainer = document.createElement("div");
         hotelContainer.className ="hotel-card"
@@ -101,10 +101,11 @@ const readData = async () => {
         resEnd.className = `end${hotelId}`
        
         const reservationButton = document.createElement("button");
+        reservationButton.className = "reservation"
 
         resStart.placeholder = "Check-in"
         resEnd.placeholder = "Check-out"
-        reservationButton.innerHTML = "reserve";
+        reservationButton.innerHTML = "Reserve";
         idNumber.innerHTML = id;
         hotelName.innerHTML = name;
         hotelImg.src = image;
