@@ -64,7 +64,7 @@ app.post("/createUser", async (req, res) => {
 	})
 	
 
-	// res.redirect("http://localhost:3021/viewHotels")
+	res.redirect("http://localhost:3021/viewHotels")
 });
 
 //  POSSIBLE LOGIN
@@ -94,7 +94,7 @@ app.post("/createReservations", async (req, res) => {
 	const newRes = await Reservations.create({
 		startDate: startDate,
 		endDate: endDate,
-		userId: userId,
+		// userId: userId,
 		hotelId: hotelId
 	})
 	res.send(newRes)

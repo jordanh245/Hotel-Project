@@ -5,7 +5,32 @@ const infoContainer = document.querySelector(".info-container")
 
 
 
-
+const reserveHotel = async (id) => {
+    // console.log("reserve Hotel ", id)
+    const startDate = document.querySelector(`.start${id}`).value;
+// console.log(checkIn)
+    const endDate = document.querySelector(`.end${id}`).value;
+    // console.log(checkIn)
+    // console.log(checkOut)
+    
+    const resTable = {
+        startDate,
+        endDate, 
+        hotelId
+    
+    };
+    console.log(resTable)
+    const url = "http://localhost:3021/createReservations";
+    const createReservation = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": "true",
+        },
+        body: JSON.stringify(resTable),
+      });
+} 
 const readData = async () => {
 
     infoContainer.innerHTML = "";
@@ -58,16 +83,28 @@ const readData = async () => {
         const name = item.hotelName;
         const address = item.hotelAddress;
         const image = item.hotelImg;
+<<<<<<< HEAD
         
         const hotelContainer = document.createElement("div");
         hotelContainer.className = "hotel-card"
+=======
+        const hotelId = item.id
+        // console.log(hotelId)
+        const hotelContainer = document.createElement("div");
+        hotelContainer.className ="hotel-card"
+
+>>>>>>> 2fa1e284317084d7257f29e205a2ab61ca0ff021
         const idNumber = document.createElement("h2");
         const hotelName = document.createElement("h1");
         const hotelImg = document.createElement("img");
         const hotelAddress = document.createElement("p");
         
-        const resStart = document.createElement("input")
+        const resStart = document.createElement("input");
+        resStart.className = `start${hotelId}`
+        
         const resEnd = document.createElement('input')
+        resEnd.className = `end${hotelId}`
+       
         const reservationButton = document.createElement("button");
 
         resStart.placeholder = "Check-in"
@@ -77,13 +114,18 @@ const readData = async () => {
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
+<<<<<<< HEAD
         hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton)
         infoContainer.append(hotelContainer)
+=======
+        hotelContainer.append(hotelName, hotelImg, hotelAddress, idNumber, resStart, resEnd,reservationButton);
+        infoContainer.append(hotelContainer)
+
+>>>>>>> 2fa1e284317084d7257f29e205a2ab61ca0ff021
 
         
-        
         reservationButton.addEventListener("click", () => {
-            console.log(reservationButton)
+            reserveHotel(hotelId)
         })
     
 
