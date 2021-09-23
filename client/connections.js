@@ -91,11 +91,11 @@ const readData = async () => {
 
         const idNumber = document.createElement("h2");
         const hotelName = document.createElement("h1");
-        hotelName.className = "hotel-name"
+        hotelName.className = "hotel-name";
         const hotelImg = document.createElement("img");
-        hotelImg.className = "image"
+        hotelImg.className = "image";
         const hotelAddress = document.createElement("p");
-        hotelAddress.className = "address-name"
+        hotelAddress.className = "address-name";
         
         const resStart = document.createElement("input");
         resStart.className = `start${hotelId}`
@@ -104,7 +104,7 @@ const readData = async () => {
         resEnd.className = `end${hotelId}`
        
         const reservationButton = document.createElement("button");
-        reservationButton.className = "reservation"
+        reservationButton.className = "reservation";
 
         resStart.placeholder = "Check-in"
         resEnd.placeholder = "Check-out"
