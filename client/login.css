@@ -27,10 +27,18 @@ a {
     color: #E7625F;
 }
 
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 55px;
+}
+
 
 .container {
     width: 360px;
-    padding: 10% 0 0;
+    padding: 1% 0 0;
     margin: auto;
 }
 
