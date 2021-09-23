@@ -6,6 +6,10 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.info-container {
+    background-color: #E9EAE0;
+}
+
 .logo {
     height: 65px;
     width: 65px;
