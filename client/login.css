@@ -27,10 +27,34 @@ a {
     color: #E7625F;
 }
 
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 65px;
+}
+
+.header {
+    animation: transitionIn 7s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
 
 .container {
     width: 360px;
-    padding: 10% 0 0;
+    padding: 1% 0 0;
     margin: auto;
 }
 
@@ -46,7 +70,7 @@ a {
 }
 
 .form input {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     outline: 1;
     background: #f2f2f2;
     width: 100%;
@@ -71,6 +95,7 @@ a {
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
+    box-shadow: 5px 5px 5px gray;
 }
 
 .form button:hover, .form button:active {
@@ -85,4 +110,9 @@ a {
 .login-form {
     display: flex;
     flex-direction: column;
+}
+
+.message {
+    margin-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
