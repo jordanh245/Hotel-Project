@@ -29,4 +29,5 @@ Western Suites allows the user to make a reservation at the most popular hotels 
 - Mobile responsive
 
 
-Medium articlle: https://medium.com/@jordanharris245/western-suites-6b9df8e1aa09
+Medium articles:  Jordan - https://medium.com/@jordanharris245/western-suites-6b9df8e1aa09
+                  Xavier - https://medium.com/@jordanharris245/western-suites-6b9df8e1aa09
