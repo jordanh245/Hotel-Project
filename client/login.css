@@ -117,15 +117,21 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.background {
+.section-one {
     background-color: #E9EAE0;
     background-size: 100%;
+    border-bottom: 1px solid gray;
 }
 
 .words {
     padding: 5px;
     margin-top: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.words-two {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    padding: 5px;
 }
 
 .grid {
@@ -151,4 +157,8 @@ a {
  .image-four:hover, .image-five:hover {
     transform: scale(1.25);
      z-index: 1;
+ }
+
+ .section-two {
+     background-color: #c9c9c9;
  }
