@@ -1,5 +1,5 @@
 
-// creating functionality for the registration button
+// CREATES REGERSTRATION FOR USERS
 const registrationButton = document.querySelector(".registration-btn");
 const loginButton = document.querySelector(".login-btn");
 

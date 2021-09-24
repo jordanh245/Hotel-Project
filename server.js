@@ -52,6 +52,9 @@ app.get("/reservations", (req, res) => {
 // ------------------
 
 
+
+
+
 // CREATE FOR THE USER
 app.post("/createUser", async (req, res) => {
 	const {firstName, lastName, email, username, password} = req.body;
@@ -66,6 +69,9 @@ app.post("/createUser", async (req, res) => {
 
 	res.redirect("http://localhost:3021/viewHotels")
 });
+
+
+
 
 //  POSSIBLE LOGIN
 app.post("/login", async (req, res)=> {
@@ -86,6 +92,8 @@ app.post("/login", async (req, res)=> {
 	.send("That is not a real user")
 }
 });
+
+
 
 
 // CREATE RESERVATION
@@ -129,10 +137,12 @@ app.get ("/viewReservations", async (req, res)=> {
 
 // UPDATE RESERVATIONS
 app.post("/updateReservation/:id", async (req, res) => {
-	const {startDate, endDate} = req.body
+	
 	const newDate = await Reservations.update(req.body,{
 		where:{
-			id:req.params.id
+			id:req.params.id,
+			// startDate: startDate,
+			// endDate: endDate
 		
 		}
 	});
@@ -140,17 +150,26 @@ app.post("/updateReservation/:id", async (req, res) => {
 	res.send(newDate)
 })
 
-app.get("/viewReservationDetails/:id", async (req, res) => {
-	const { hotelId } = req.params
-	const details = await Hotels.findAll({
-		where:{
-			id:hotelId
+
+
+
+
+// ATTEMPT TO ACCESS FOREIGN KEYS (DOES NOT WORK)
+
+// app.get("/viewReservationDetails/:id", async (req, res) => {
+// 	const { hotelId } = req.params
+// 	const details = await Hotels.findAll({
+// 		where:{
+// 			id:hotelId
 		
-		}
-	});
+// 		}
+// 	});
 	
-	res.send(details)
-})
+// 	res.send(details)
+// })
+
+
+
 
 
 
@@ -175,6 +194,8 @@ app.post("/deleteReservation/:id", async (req, res) => {
 // 	})
 // 	res.send("removed")
 // })
+
+
 
 
 app.listen(PORT, console.log(`on ${PORT}`))
