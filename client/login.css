@@ -130,8 +130,14 @@ a {
 
 .words-two {
     font-family: Georgia, 'Times New Roman', Times, serif; 
-    padding: 5px;
+    padding: 10px;
     color: #C85250;
+}
+
+.words-three {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    padding: 10px;
+    color: black;
 }
 
 .grid {
@@ -228,4 +234,20 @@ a {
 
  }
 
- 
+ .button-one, .button-two, .button-three, 
+ .button-four, .button-five {
+    color: #E9EAE0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    outline: 0;
+    width: 80px;
+    border: 0;
+    padding: 5px;
+    background: #E7625F;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px gray;
+    margin-bottom: 10px;
+ }
+
