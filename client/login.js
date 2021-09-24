@@ -61,9 +61,44 @@ registrationButton.addEventListener("click", () => addUserInfo())
 // loginButton.addEventListener("click", () => loginButtonCreate())
 //// end of registration button
 
+const buttonOne = document.querySelector(".button-one");
+const buttonTwo = document.querySelector(".button-two");
+const buttonThree = document.querySelector(".button-three");
+const buttonFour = document.querySelector(".button-four");
+const buttonFive = document.querySelector(".button-five");
+
+function buttonOneAlert () {
+    console.log("clicked")
+    alert("Sorry, you must be logged in to reserve.")
+}
+
+function buttonTwoAlert () {
+    console.log("clicked")
+    alert("Sorry, this suite has sold out. Try another")
+}
+
+function buttonThreeAlert () {
+    console.log("clicked")
+    alert("Sorry, you must be logged in to reserve.")
+}
+
+function buttonFourAlert () {
+    console.log("clicked")
+    alert("Sorry, you must be logged in to reserve.")
+}
+
+function buttonFiveAlert () {
+    console.log("clicked")
+    alert("Sorry, you must be logged in to reserve.")
+}
 
 
 
+buttonOne.addEventListener("click", () => buttonOneAlert())
+buttonTwo.addEventListener("click", () => buttonTwoAlert())
+buttonThree.addEventListener("click", () => buttonThreeAlert())
+buttonFour.addEventListener("click", () => buttonFourAlert())
+buttonFive.addEventListener("click", () => buttonFiveAlert())
 
 
 
