@@ -99,3 +99,12 @@ input {
     background: #F7BEC0;
     color: white;
 }
+
+.footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+
+}
