@@ -1,5 +1,4 @@
-# Hotel-Project
-Hotel Website
+
 # Western Suites
 
 This website was made to fulfill the requirements of our Full Stack Group Project.
