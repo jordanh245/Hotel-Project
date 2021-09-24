@@ -99,9 +99,6 @@ const readData = async () => {
 }}
 
 
-
-
-
 readData()
 
 
