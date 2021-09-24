@@ -145,6 +145,7 @@ h4, h6 {
     color: black;
 }
 
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -256,3 +257,8 @@ h4, h6 {
     margin-bottom: 10px;
  }
 
+ .button-one:hover, .button-two:hover, .button-three:hover, 
+ .button-four:hover, .button-five:hover {
+    background: #F7BEC0;
+    color: white;
+ }
