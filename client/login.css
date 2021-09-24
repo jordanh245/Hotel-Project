@@ -161,7 +161,7 @@ h4, h6 {
      margin-bottom: 10px;
      border: 1px solid black;
      border-radius: 4px;
-     box-shadow: 5px 5px 5px black;
+     box-shadow: 5px 5px 5px gray;
      transition: 1.3s;
  }
 
@@ -267,3 +267,48 @@ h4, h6 {
  .footer {
      background-color: black;
  }
+
+
+ @media (max-width: 995px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    
+    }
+
+    .words, .words-two, .words-three {
+        text-align: center;
+    }
+
+    .button-one, .button-two, .button-three, 
+ .button-four, .button-five {
+     display: flex;
+     flex-wrap: wrap;
+     text-align: center;
+
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    outline: 0;
+    width: 270px;
+    border: 0;
+    padding: 15px;
+    margin-left: 111px;
+    background: #E7625F;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px gray;
+ }
+
+}
+
+
+@media (max-width: 536px) {
+    .banner-one, .banner-two, .banner-three, 
+    .banner-four {
+        text-align: center;
+        margin-left: 85px;
+    }
+} 
