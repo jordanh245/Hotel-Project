@@ -266,6 +266,11 @@ h4, h6 {
 
  .footer {
      background-color: black;
+     text-align: center;
+     color: white;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     padding: 20px;
+
  }
 
 
