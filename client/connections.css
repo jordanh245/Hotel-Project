@@ -95,9 +95,13 @@ input {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.address-name {
+.address-name{
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-top: 5px;
+}
+.state-name{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .reservation {
