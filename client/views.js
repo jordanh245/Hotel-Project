@@ -37,11 +37,13 @@ const showReservations = async () => {
 		const end = item.endDate
         const reserveId = item.id
         
-
+        const id = document.createElement("p")
+        id.className = "id"
 		const startDate = document.createElement("p");
+        startDate.className = "startDate"
 		const endDate = document.createElement("p");
-		const id = document.createElement("p")
-       
+        endDate.className = "endDate"
+		
         
 
 
@@ -54,7 +56,7 @@ const showReservations = async () => {
 		
 
 
-		resContainer.append(startDate, endDate,id)
+		resContainer.append(id,startDate, endDate)
 
 	}
 
