@@ -287,7 +287,7 @@ h4, h6 {
     }
 
     .button-one, .button-two, .button-three, 
- .button-four, .button-five {
+    .button-four, .button-five {
      display: flex;
      flex-wrap: wrap;
      text-align: center;
