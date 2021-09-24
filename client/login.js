@@ -61,9 +61,21 @@ registrationButton.addEventListener("click", () => addUserInfo())
 // loginButton.addEventListener("click", () => loginButtonCreate())
 //// end of registration button
 
+const buttonOne = document.querySelector(".button-one");
+const buttonTwo = document.querySelector(".button-two");
 
+function buttonOneAlert () {
+    console.log("clicked")
+    alert("Sorry, you must be logged in to reserve.")
+}
 
+function buttonTwoAlert () {
+    console.log("clicked")
+    alert("Sorry, this suite has sold out. Try another")
+}
 
+buttonOne.addEventListener("click", () => buttonOneAlert())
+buttonTwo.addEventListener("click", () => buttonTwoAlert())
 
 
 
