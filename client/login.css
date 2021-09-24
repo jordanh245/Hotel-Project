@@ -140,6 +140,11 @@ a {
     color: black;
 }
 
+h4, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    color: black;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
