@@ -53,7 +53,7 @@ a {
 
 
 .container {
-    width: 360px;
+    width: 500px;
     padding: 1% 0 0;
     margin: auto;
 }
@@ -62,7 +62,7 @@ a {
     position: relative;
     z-index: 1;
     background: #E9EAE0;
-    max-width: 360px;
+    max-width: 500px;
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
@@ -120,6 +120,7 @@ a {
 .section-one {
     background-color: #E9EAE0;
     background-size: 100%;
+
 }
 
 .words {
@@ -228,10 +229,25 @@ h4, h6 {
      height: 400px;
      width: 300px;
  }
-
+ .banner-five {
+    display: flex;
+    align-items:flex-end;
+    text-align: center;
+     background-image: url(https://images.unsplash.com/photo-1488750059241-ed3ad4563245?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80);
+     height: 400px;
+     width: 300px;
+ }
+ .banner-six {
+    display: flex;
+    align-items:flex-end;
+    text-align: center;
+     background-image: url(https://images.unsplash.com/photo-1580541631971-a0e8ce42e97f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=697&q=80);
+     height: 400px;
+     width: 300px;
+ }
 
  .para-one, .para-two, 
- .para-three, .para-four {
+ .para-three, .para-four,.para-five, .para-six {
      padding: 10px;
      color: white;
      font-family: Georgia, 'Times New Roman', Times, serif;
@@ -246,7 +262,7 @@ h4, h6 {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     outline: 0;
-    width: 80px;
+    width: 150px;
     border: 0;
     padding: 5px;
     background: #E7625F;
@@ -296,10 +312,10 @@ h4, h6 {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     outline: 0;
-    width: 270px;
+    width: 268px;
     border: 0;
     padding: 15px;
-    margin-left: 111px;
+    margin-left: 104px;
     background: #E7625F;
     font-size: 14px;
     cursor: pointer;
@@ -312,8 +328,15 @@ h4, h6 {
 
 @media (max-width: 536px) {
     .banner-one, .banner-two, .banner-three, 
-    .banner-four {
+    .banner-four, .banner-five, .banner-six {
         text-align: center;
-        margin-left: 85px;
+        margin-left: 100px;
     }
+    .section-one {
+        text-align: center;
+    }
+    .button-one, .button-two, .button-three, 
+ .button-four, .button-five {
+     margin-left: 130px;
+ }
 } 

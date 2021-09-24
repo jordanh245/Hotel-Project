@@ -59,6 +59,7 @@ const readData = async () => {
         const address = item.hotelAddress;
         const image = item.hotelImg;
         const hotelId = item.id
+        const state = item.hotelState
         const hotelContainer = document.createElement("div");
         hotelContainer.className ="hotel-card"
 
@@ -69,6 +70,8 @@ const readData = async () => {
         hotelImg.className = "image";
         const hotelAddress = document.createElement("p");
         hotelAddress.className = "address-name";
+        const hotelState = document.createElement("p")
+        hotelState.className = "state-name"
         
         const resStart = document.createElement("input");
         resStart.className = `start${hotelId}`
@@ -86,7 +89,8 @@ const readData = async () => {
         hotelName.innerHTML = name;
         hotelImg.src = image;
         hotelAddress.innerHTML = address;
-        hotelContainer.append(hotelName, hotelImg, hotelAddress,  resStart, resEnd,reservationButton);
+        hotelState.innerHTML = state
+        hotelContainer.append(hotelName, hotelImg, hotelAddress,hotelState, resStart, resEnd,reservationButton);
         infoContainer.append(hotelContainer)
 
 
