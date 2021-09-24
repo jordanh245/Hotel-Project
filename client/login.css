@@ -162,3 +162,36 @@ a {
  .section-two {
      background-color: #c9c9c9;
  }
+
+ .grid-two {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     padding: 2px;
+     text-align: center;
+ }
+
+
+ .banner-one {
+     background-image: url(https://images.unsplash.com/photo-1510623425998-4894a2ad0da9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80);
+     height: 400px;
+     width: 300px;
+ }
+
+ .banner-two {
+     background-image: url(https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=395&q=80);
+     height: 400px;
+     width: 300px;
+ }
+
+
+ .banner-three {
+     background-image: url(https://images.unsplash.com/photo-1562517634-baa2da3acfbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80);
+     height: 400px;
+     width: 300px;
+ }
+
+ .banner-four {
+     background-image: url(https://images.unsplash.com/photo-1620658927695-c33df6fb8130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80);
+     height: 400px;
+     width: 300px;
+ }
