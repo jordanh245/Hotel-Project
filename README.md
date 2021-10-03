@@ -20,6 +20,8 @@ Front end:
 - JavaScript
 - Bootstrap
 - Mobile responsive
+
+
 Medium articles:
 
 - https://medium.com/@jordanharris245/western-suites-6b9df8e1aa09
