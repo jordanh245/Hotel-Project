@@ -22,5 +22,5 @@ Front end:
 - Mobile responsive
 Medium articles:
 
-https://medium.com/@jordanharris245/western-suites-6b9df8e1aa09
-https://medium.com/@xmcgriff92/xaviers-full-stack-project-f0ded0ed72ed
+- https://medium.com/@jordanharris245/western-suites-6b9df8e1aa09
+- https://medium.com/@xmcgriff92/xaviers-full-stack-project-f0ded0ed72ed
