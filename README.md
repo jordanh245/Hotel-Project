@@ -1,7 +1,8 @@
 Western Suites
 This website was made to fulfill the requirements of our Full Stack Group Project.
 
-About
+About:
+
 Western Suites allows the user to make a reservation at the most popular hotels throughout the state of California. The user can choose the date of the reservation along with updating the dates and completely deleting the reservation.
 
 Features:
